@@ -1,6 +1,5 @@
 # Copyright (c) 2023 CIAM Group
 **The code can only be used for non-commercial purposes. Please contact the authors if you want to use this code for business matters.**  
-**If this repository is helpful for your research, please cite our paper:<br />**
 
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
 
