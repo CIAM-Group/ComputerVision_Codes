@@ -17,8 +17,7 @@ This repository contains the pytorch implementation code and evaluation scripts.
 ```
 conda env create -f environment.yaml
 ```
-The code has been test on Linux operating system. It runs on both CPU and GPU.
-Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed to run in Windows or Mac OS.
+The code has been test on Linux operating system. It runs on GPU with Python 3.8.
 
 <br />
 
