@@ -5,7 +5,7 @@
 
 <i>Shuangchun Gui, Zhenkun Wang, Jixiang Chen, Xun Zhou, Chen Zhang, and Yi Cao</i>
 
-<img src="imgs/3_metd_framework.pdf" width="100%">
+<img src="imgs/3_metd_framework.png" width="100%">
 
 This repository contains the pytorch implementation code and evaluation scripts. <br />
 
