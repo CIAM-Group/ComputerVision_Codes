@@ -213,7 +213,7 @@ class T50(Dataset):
         self.img_dir = img_dir
         self.transform = transform
         self.target_transform = target_transform
-        if self.split == 'train' and self.args.loss_type == 'all':
+        if self.split == 'train' and self.args.loss_type == 'all' and self.args.train:
             with open('../0-5fold/data_feats/run_{}/k'.format(self.args.teacher_pred_version) + str(
                     test_fold) + '_i_pred.pkl', 'rb') as f:
                 self.preds_i = pickle.load(f)[self.img_dir[-2:]]
