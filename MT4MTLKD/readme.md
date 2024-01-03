@@ -148,15 +148,13 @@ MT4MTL-KD's implementation is based on the code of [RDV](https://github.com/CAMM
 If this code is useful for your research, please consider citing:
 
   ```shell
-@ARTICLE{111,
+@article{gui2023mt4mtl,
+  title={MT4MTL-KD: A Multi-teacher Knowledge Distillation Framework for Triplet Recognition},
   author={Gui, Shuangchun and Wang, Zhenkun and Chen, Jixiang and Zhou, Xun and Zhang, Chen and Cao, Yi},
-  journal={IEEE Transactions on Medical Imaging}, 
-  title={MT4MTL-KD: A Multi-teacher Knowledge Distillation Framework for Triplet Recognition}, 
+  journal={IEEE Transactions on Medical Imaging},
   year={2023},
-  volume={},
-  number={},
-  pages={1-1},
-  doi={}}
+  publisher={IEEE}
+}
 
   ```
 
