@@ -1,13 +1,11 @@
-# Copyright (c) 2023 CIAM Group
-**The code can only be used for non-commercial purposes. Please contact the authors if you want to use this code for business matters.**  
-
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+
 
 # **MT4MTL-KD**: A Multi-teacher Knowledge Distillation Framework for Triplet Recognition
 
 <i>Shuangchun Gui, Zhenkun Wang, Jixiang Chen, Xun Zhou, Chen Zhang, and Yi Cao</i>
 
-<img src="imgs/3_metd_framework.jpg" width="100%">
+<img src="imgs/3_metd_framework.pdf" width="100%">
 
 This repository contains the pytorch implementation code and evaluation scripts. <br />
 
@@ -16,7 +14,8 @@ This repository contains the pytorch implementation code and evaluation scripts.
 ```
 conda env create -f environment.yaml
 ```
-The code has been test on Linux operating system. It runs on GPU with Python 3.8.
+The code has been test on Linux operating system. It runs on both CPU and GPU.
+Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed to run in Windows or Mac OS.
 
 <br />
 
@@ -93,16 +92,25 @@ Download [CholecT45 dataset](https://forms.gle/jTdPJnZCmSe2Daw7A)
 <br>
 
 ## Evaluation
+### SwinL -> Res18
 * Download [our models](https://drive.google.com/file/d/1htWfsopwfHx5VGTcBx35r_yL_OJhEZYi/view?usp=drive_link)
 * Put them under `./Spatial_cnn/__checkpoint__/run_SwinL2Res18` and `./Temporal_tenco/__checkpoint__/run_SwinL2Res18_TCN`
 * cd `Scripts`
 * Run scripts in `test_fold1.sh` to start the evaluation process
-* Fold 1 results of the CholecT45 cross-validation split (Table V in the paper):
 
-||Components AP ||||| Association AP |||
-:---:|:---:|:---:|:---: |:---:|:---:|:---:|:---:|:---:|
-AP<sub>I</sub> | AP<sub>V</sub> | AP<sub>T</sub> ||| AP<sub>IV</sub> | AP<sub>IT</sub> | AP<sub>IVT</sub> |
-89.87 | 70.60 | 50.20 ||| 41.84 | 44.25 | 35.88 |
+
+### Res18 -> SwinL
+* Download [our models (Res182SwinL)](https://drive.google.com/file/d/1H_evcxlEwOsXbcVk90-ZpDh0wZhuu9rf/view?usp=drive_link)
+* Put them under `./Spatial_Transformer/__checkpoint__/run_Res182SwinL` and `./Temporal_tenco/__checkpoint__/run_Res182SwinL_TCN`
+* cd `Scripts`
+* Run scripts in `test_fold1_res2swin.sh` to start the evaluation process
+* Fold 1 results of the CholecT45 cross-validation split (Table VII in the paper):
+
+|    Methods    |||||| Results |
+:---:|:---:|:---:|:---: |:---:|:---:|:---:|
+|   | AP<sub>I</sub> | AP<sub>V</sub> | AP<sub>T</sub> ||| AP<sub>IVT</sub> |
+SwinL -> Res18 | 89.87 | 70.60 | 50.20 ||| 35.88 |
+Res18 -> SwinL | 90.26 | 72.21 | 54.82 ||| 37.05 |
 
 <br />
 
@@ -148,13 +156,15 @@ MT4MTL-KD's implementation is based on the code of [RDV](https://github.com/CAMM
 If this code is useful for your research, please consider citing:
 
   ```shell
-@article{gui2023mt4mtl,
-  title={MT4MTL-KD: A Multi-teacher Knowledge Distillation Framework for Triplet Recognition},
+@ARTICLE{111,
   author={Gui, Shuangchun and Wang, Zhenkun and Chen, Jixiang and Zhou, Xun and Zhang, Chen and Cao, Yi},
-  journal={IEEE Transactions on Medical Imaging},
+  journal={IEEE Transactions on Medical Imaging}, 
+  title={MT4MTL-KD: A Multi-teacher Knowledge Distillation Framework for Triplet Recognition}, 
   year={2023},
-  publisher={IEEE}
-}
+  volume={},
+  number={},
+  pages={1-1},
+  doi={}}
 
   ```
 
