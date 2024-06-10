@@ -179,7 +179,6 @@ def test_loop(dataloader, model, activation):
                        activation(logit_ivt).detach().cpu())  # Log metrics
         feats = torch.vstack(feats)
 
-
     mAP.video_end()
     mAPv.video_end()
     mAPt.video_end()
@@ -345,7 +344,7 @@ if is_test:
     for tag in ['best']:
         print('========', tag, '==============')
         if tag == 'best':
-            model.load_state_dict(torch.load(test_ckpt))
+            model.load_state_dict(torch.load(test_ckpt), strict=False)
 
         mAP.reset_global()
         mAPi.reset_global()
@@ -358,7 +357,6 @@ if is_test:
             all_feats[test_dataloader.dataset.img_dir.split('/')[-1][3:]] = feats.detach().cpu().numpy()
 
         import pickle
-
 
         if FLAGS.loss_type == 'all':
             os.makedirs(
