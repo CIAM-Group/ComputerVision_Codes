@@ -5,7 +5,7 @@
 
 <i>Shuangchun Gui, Zhenkun Wang, Jixiang Chen, Xun Zhou, Chen Zhang, and Yi Cao</i>
 
-<img src="imgs/3_metd_framework.pdf" width="100%">
+<img src="imgs/3_metd_framework.jpg" width="100%">
 
 This repository contains the pytorch implementation code and evaluation scripts. <br />
 
@@ -106,7 +106,7 @@ Download [CholecT45 dataset](https://forms.gle/jTdPJnZCmSe2Daw7A)
 * Run scripts in `test_fold1_res2swin.sh` to start the evaluation process
 * Fold 1 results of the CholecT45 cross-validation split (Table VII in the paper):
 
-|    Methods    |||||| Results |
+|    Methods    ||| Results ||||
 :---:|:---:|:---:|:---: |:---:|:---:|:---:|
 |   | AP<sub>I</sub> | AP<sub>V</sub> | AP<sub>T</sub> ||| AP<sub>IVT</sub> |
 SwinL -> Res18 | 89.87 | 70.60 | 50.20 ||| 35.88 |
