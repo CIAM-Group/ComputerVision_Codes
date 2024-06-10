@@ -150,6 +150,7 @@ data_augmentations = FLAGS.augmentation_list
 iterable_augmentations = []
 print("Configuring network ...")
 
+
 def assign_gpu(gpu=None):
     os.environ['CUDA_VISIBLE_DEVICES'] = str(gpu)
     os.environ['TF_ENABLE_WINOGRAD_NONFUSED'] = '1'
@@ -516,7 +517,7 @@ if is_test:
     for tag in test_list:
         print('========', tag, '==============')
         if tag == 'best':
-            model.load_state_dict(torch.load(test_ckpt))
+            model.load_state_dict(torch.load(test_ckpt), strict=False)
 
         mAP.reset_global()
         mAPi.reset_global()
