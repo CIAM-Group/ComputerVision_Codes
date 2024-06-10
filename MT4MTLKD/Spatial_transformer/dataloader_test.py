@@ -84,8 +84,8 @@ class CholecT50():
             val_videos = video_split['val']
         self.train_records = ['VID{}'.format(str(v).zfill(2)) for v in train_videos]
         self.val_records = ['VID{}'.format(str(v).zfill(2)) for v in val_videos]
-        self.test_records = ['VID{}'.format(str(v).zfill(2)) for v in test_videos]
-        # self.test_records = ['VID{}'.format(str(v).zfill(2)) for v in train_videos + test_videos + val_videos]
+        # self.test_records = ['VID{}'.format(str(v).zfill(2)) for v in test_videos]
+        self.test_records = ['VID{}'.format(str(v).zfill(2)) for v in train_videos + test_videos + val_videos]
         self.augmentations = {
             'original': self.no_augumentation,
             'vflip': transforms.RandomVerticalFlip(0.4),
